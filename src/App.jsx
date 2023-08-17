@@ -58,7 +58,7 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content: "Explain all concepts like I am 10 years old.",
+      content: "Talk like Dr. Seus",
     };
 
     const apiRequestBody = {
@@ -69,7 +69,7 @@ function App() {
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + REACT_APP_OPENAI_API,
+        Authorization: "Bearer " + import.meta.env.VITE_OPENAI_API,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
