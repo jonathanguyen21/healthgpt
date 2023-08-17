@@ -69,7 +69,7 @@ function App() {
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + process.env.REACT_APP_OPENAI_API,
+        Authorization: "Bearer " + REACT_APP_OPENAI_API,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
@@ -81,6 +81,7 @@ function App() {
         console.log(data);
         console.log(data.choices[0].message.content);
       });
+    setTyping(false);
   }
 
   return (
