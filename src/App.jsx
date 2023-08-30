@@ -15,7 +15,7 @@ function App() {
 
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I am ChatGPT!",
+      message: "Hello, feel free to ask me any health-related questions!",
       sender: "ChatGPT",
     },
   ]);
@@ -58,7 +58,8 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content: "Talk like Dr. Seus",
+      content:
+        "Talk as if you are a professional doctor and you are speaking to a patient.  Only answer health related questions. If it's not health related say you are just a doctor.",
     };
 
     const apiRequestBody = {
@@ -80,16 +81,25 @@ function App() {
       .then((data) => {
         console.log(data);
         console.log(data.choices[0].message.content);
+        setMessages([
+          ...chatMessages,
+          {
+            message: data.choices[0].message.content,
+            sender: "ChatGPT",
+          },
+        ]);
       });
     setTyping(false);
   }
 
   return (
     <>
-      <div className="relative h-[800px] w-[700px]">
+      <header className="text-[5rem] text-center">DoctorGPT</header>
+      <div className="relative h-[700px] w-[600px] m-auto">
         <MainContainer>
           <ChatContainer>
             <MessageList
+              scrollBehavior="smooth"
               typingIndicator={
                 typing ? <TypingIndicator content="ChatGPT is typing" /> : null
               }
@@ -98,7 +108,11 @@ function App() {
                 return <Message key={i} model={message} />;
               })}
             </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />
+            <MessageInput
+              placeholder="Type message here"
+              attachButton={false}
+              onSend={handleSend}
+            />
           </ChatContainer>
         </MainContainer>
       </div>
