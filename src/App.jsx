@@ -94,44 +94,46 @@ function App() {
 
   return (
     <>
-      <header className="text-[5rem] text-[#A8B9E3] text-center">
-        DoctorGPT
-      </header>
-      <div className="relative h-[700px] w-[600px] m-auto">
-        <MainContainer>
-          <ChatContainer>
-            <MessageList
-              typingIndicator={
-                typing ? (
-                  <TypingIndicator content="DoctorGPT is typing" />
-                ) : null
-              }
-            >
-              {messages.map((message, i) => {
-                return <Message key={i} model={message} />;
-              })}
-            </MessageList>
-            <MessageInput
-              placeholder="Type message here"
-              attachButton={false}
-              onSend={handleSend}
-            />
-          </ChatContainer>
-        </MainContainer>
-      </div>
-      <footer className="text-[1rem] text-[#BBBDFD] text-center ">
-        <p>Your own personal medical advisor.</p>
-        <div className="text-[.8rem] w-[700px] m-auto mt-8 mb-8">
-          <p className="text-[#8081ac]">
-            <span className="font-bold">Disclaimer:</span> The information
-            provided on this website is for general informational purposes only
-            and is not intended as a substitute for professional medical advice,
-            diagnosis, or treatment. Always seek the advice of your physician or
-            other qualified health provider with any questions you may have
-            regarding a medical condition.
-          </p>
+      <body>
+        <header className="text-[5rem] text-[#A8B9E3] text-center">
+          DoctorGPT
+        </header>
+        <div className="relative h-[700px] w-[600px] m-auto">
+          <MainContainer>
+            <ChatContainer>
+              <MessageList
+                typingIndicator={
+                  typing ? (
+                    <TypingIndicator content="DoctorGPT is typing" />
+                  ) : null
+                }
+              >
+                {messages.map((message, i) => {
+                  return <Message key={i} model={message} />;
+                })}
+              </MessageList>
+              <MessageInput
+                placeholder="Type message here"
+                attachButton={false}
+                onSend={handleSend}
+              />
+            </ChatContainer>
+          </MainContainer>
         </div>
-      </footer>
+        <footer className="text-[1rem] text-[#A8B9E3] text-center ">
+          <p>Your own personal medical advisor.</p>
+          <div className="text-[.8rem] w-[700px] m-auto mt-8 mb-8">
+            <p className="text-[#8081ac]">
+              <span className="font-bold">Disclaimer:</span> The information
+              provided on this website is for general informational purposes
+              only and is not intended as a substitute for professional medical
+              advice, diagnosis, or treatment. Always seek the advice of your
+              physician or other qualified health provider with any questions
+              you may have regarding a medical condition.
+            </p>
+          </div>
+        </footer>
+      </body>
     </>
   );
 }
