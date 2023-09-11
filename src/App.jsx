@@ -96,7 +96,7 @@ function App() {
     <>
       <body>
         <header className="text-[5rem] text-[#A8B9E3] text-center">
-          DoctorGPT
+          HealthGPT
         </header>
         <div className="relative h-[700px] w-[600px] m-auto">
           <MainContainer>
@@ -104,7 +104,7 @@ function App() {
               <MessageList
                 typingIndicator={
                   typing ? (
-                    <TypingIndicator content="DoctorGPT is typing" />
+                    <TypingIndicator content="HealthGPT is typing" />
                   ) : null
                 }
               >
