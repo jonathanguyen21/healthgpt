@@ -1,4 +1,4 @@
-import "./App.css";
+import "./Chat.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -93,7 +93,7 @@ function App() {
   return (
     <>
       <body>
-        <header className="text-center flex items-center justify-center mb-4 mt-4">
+      <header className="text-center flex items-center justify-center mb-4 mt-10" style={{ paddingTop: '100px' }}>
           <span className="text-6xl text-#4CA9EE font-custom">HealthGPT</span>
           <img src='https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81'></img>
         </header>
