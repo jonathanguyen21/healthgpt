@@ -1,4 +1,4 @@
-import "./Chat.css";
+import "./chat.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -15,7 +15,8 @@ function App() {
 
   const [messages, setMessages] = useState([
     {
-      message: "Hello, feel free to ask me any health-related questions!",
+      message:
+        "Hello, I am a medical advisor! Feel free to ask me any health-related questions!",
       sender: "ChatGPT",
     },
   ]);
@@ -31,6 +32,7 @@ function App() {
 
     // update our messages state
     setMessages(newMessages);
+
     // set a typing indicator (GPT is typing)
     setTyping(true);
 
@@ -56,12 +58,16 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content:
-        "Talk as if you are a professional doctor and you are speaking to a patient.  Only answer health related questions. If it's not health related say you are just a doctor.",
+      content: `Follow these principles:
+        1. You are not a doctor. Please do not say you are a doctor.
+        2. You are a helpful assistant that gives medical advise, talk as if you are talking to a patient.
+        3. Only answer health related questions. If it's not health related say you are just a health advise doctor.
+        4. If you don't know the answer, say you don't know the answer.
+        5. Do not give any information about procedures and service features that do not pertain to health advise.
+        6. Don't answer any math questions. If they ask about a procedure, say you are just a health advise doctor.`,
     };
-
     const apiRequestBody = {
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-1106",
       messages: [systemMessage, ...apiMessages],
     };
 
@@ -77,7 +83,7 @@ function App() {
         return data.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log("data", data);
         console.log(data.choices[0].message.content);
         setMessages([
           ...chatMessages,
@@ -93,9 +99,9 @@ function App() {
   return (
     <>
       <body>
-      <header className="text-center flex items-center justify-center mb-4 mt-10" style={{ paddingTop: '100px' }}>
+        <header className="text-center flex items-center justify-center mb-4 mt-4">
           <span className="text-6xl text-#4CA9EE font-custom">HealthGPT</span>
-          <img src='https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81'></img>
+          <img src="https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81"></img>
         </header>
         <div className="relative h-[600px] w-[600px] m-auto">
           <MainContainer>
