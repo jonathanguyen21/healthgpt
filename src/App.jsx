@@ -95,12 +95,13 @@ function App() {
   return (
     <>
       <body>
-        <header className="text-[5rem] text-[#A8B9E3] text-center">
-          HealthGPT
+        <header className="text-center flex items-center justify-center mb-4 mt-4">
+          <span className="text-6xl text-#4CA9EE font-custom">HealthGPT</span>
+          <img src='https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81'></img>
         </header>
-        <div className="relative h-[700px] w-[600px] m-auto">
+        <div className="relative h-[600px] w-[600px] m-auto">
           <MainContainer>
-            <ChatContainer>
+            <ChatContainer className="mt-4">
               <MessageList
                 typingIndicator={
                   typing ? (
@@ -116,6 +117,7 @@ function App() {
                 placeholder="Type message here"
                 attachButton={false}
                 onSend={handleSend}
+                className="mb-4"
               />
             </ChatContainer>
           </MainContainer>
