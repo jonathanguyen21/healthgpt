@@ -26,7 +26,7 @@ function App() {
 
   const handleSend = async (message) => {
     const newMessage = {
-      message: message + " " + postPrompt,
+      message: message,
       sender: "user",
       direction: "outgoing",
     };
@@ -35,6 +35,7 @@ function App() {
 
     // update our messages state
     setMessages(newMessages);
+    newMessage.message = message + " " + postPrompt;
     // set a typing indicator (GPT is typing)
     setTyping(true);
 
