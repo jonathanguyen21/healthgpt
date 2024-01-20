@@ -31,7 +31,6 @@ function App() {
 
     // update our messages state
     setMessages(newMessages);
-
     // set a typing indicator (GPT is typing)
     setTyping(true);
 
@@ -42,7 +41,6 @@ function App() {
   async function processMessageToChatGPT(chatMessages) {
     // chatMessages { sender: "user" or "ChatGPT", message: "Message Content"}
     // apiMessages { role: "user" or "assistant, content: "Message content" }
-
     let apiMessages = chatMessages.map((messageObject) => {
       let role = "";
       if (messageObject.sender === "ChatGPT") {
