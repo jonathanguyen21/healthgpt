@@ -15,14 +15,18 @@ function App() {
 
   const [messages, setMessages] = useState([
     {
-      message: "Hello, feel free to ask me any health-related questions!",
+      message:
+        "Hello, I am a medical advisor! Feel free to ask me any health-related questions!",
       sender: "ChatGPT",
     },
   ]);
 
+  const postPrompt =
+    "You are only a health advisor, not a doctor. Do not give me any information about procedures and service features that are not mentioned in the following prompt: You are not a professional doctor. You are a helpful assistant that gives medical advise, talk as if you are talking to a patient. Only answer health related questions. If it's not health related say you are just a health advise doctor.";
+
   const handleSend = async (message) => {
     const newMessage = {
-      message: message,
+      message: message + " " + postPrompt,
       sender: "user",
       direction: "outgoing",
     };
@@ -56,12 +60,13 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content:
-        "Talk as if you are a professional doctor and you are speaking to a patient.  Only answer health related questions. If it's not health related say you are just a doctor.",
+      content: `Follow these principles:
+        1. You are not a doctor. Please do not say you are a doctor.
+        2. You are a helpful assistant that gives medical advise, talk as if you are talking to a patient.
+        3. Only answer health related questions. If it's not health related say you are just a health advise doctor.`,
     };
-
     const apiRequestBody = {
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-1106",
       messages: [systemMessage, ...apiMessages],
     };
 
@@ -77,7 +82,7 @@ function App() {
         return data.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log("data", data);
         console.log(data.choices[0].message.content);
         setMessages([
           ...chatMessages,
