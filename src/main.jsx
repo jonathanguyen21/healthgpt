@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Chat from "./pages/Chat.jsx";
 import Home from "./pages/Home.jsx";
-import Navbar from "./pages/Navbar.jsx"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LocalDoctor from "./pages/LocalDoctor.jsx";
+import Navbar from "./pages/Navbar.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -12,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Chat" element={<Chat />} />
-        <Route path="/Doctors" element={<Home />} />
+        <Route path="/DoctorsNearMe" element={<LocalDoctor />} />
       </Routes>
     </Router>
   </React.StrictMode>

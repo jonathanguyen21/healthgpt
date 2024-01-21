@@ -10,7 +10,7 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import { useState } from "react";
 
-function App() {
+function Chat() {
   const [typing, setTyping] = useState(false);
 
   const [messages, setMessages] = useState([
@@ -75,7 +75,7 @@ function App() {
       method: "POST",
       headers: {
         Authorization: "Bearer " + import.meta.env.VITE_OPENAI_API,
-        "Content-Type": "application/json",
+        "Content-Type": "apChatcation/json",
       },
       body: JSON.stringify(apiRequestBody),
     })
@@ -97,54 +97,52 @@ function App() {
   }
 
   return (
-    <>
-      <body>
-        <header
-          className="text-center flex items-center justify-center mb-4 mt-10"
-          style={{ paddingTop: "100px" }}
-        >
-          <span className="text-6xl text-#4CA9EE font-custom">HealthGPT</span>
-          <img src="https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81"></img>
-        </header>
-        <div className="relative h-[600px] w-[600px] m-auto">
-          <MainContainer>
-            <ChatContainer className="mt-4">
-              <MessageList
-                typingIndicator={
-                  typing ? (
-                    <TypingIndicator content="HealthGPT is typing" />
-                  ) : null
-                }
-              >
-                {messages.map((message, i) => {
-                  return <Message key={i} model={message} />;
-                })}
-              </MessageList>
-              <MessageInput
-                placeholder="Type message here"
-                attachButton={false}
-                onSend={handleSend}
-                className="mb-4"
-              />
-            </ChatContainer>
-          </MainContainer>
+    <body>
+      <header
+        className="text-center flex items-center justify-center mb-4 mt-10"
+        style={{ paddingTop: "100px" }}
+      >
+        <span className="text-6xl text-#4CA9EE font-custom">HealthGPT</span>
+        <img src="https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81"></img>
+      </header>
+      <div className="relative h-[450px] w-[600px] m-auto">
+        <MainContainer>
+          <ChatContainer className="mt-4">
+            <MessageList
+              typingIndicator={
+                typing ? (
+                  <TypingIndicator content="HealthGPT is typing" />
+                ) : null
+              }
+            >
+              {messages.map((message, i) => {
+                return <Message key={i} model={message} />;
+              })}
+            </MessageList>
+            <MessageInput
+              placeholder="Type message here"
+              attachButton={false}
+              onSend={handleSend}
+              className="mb-4"
+            />
+          </ChatContainer>
+        </MainContainer>
+      </div>
+      <footer className="text-[1rem] text-[#A8B9E3] text-center ">
+        <p>Your own personal medical advisor.</p>
+        <div className="text-[.8rem] w-[700px] m-auto mt-8 mb-8">
+          <p className="text-[#8081ac]">
+            <span className="font-bold">Disclaimer:</span> The information
+            provided on this website is for general informational purposes only
+            and is not intended as a substitute for professional medical advice,
+            diagnosis, or treatment. Always seek the advice of your physician or
+            other qualified health provider with any questions you may have
+            regarding a medical condition.
+          </p>
         </div>
-        <footer className="text-[1rem] text-[#A8B9E3] text-center ">
-          <p>Your own personal medical advisor.</p>
-          <div className="text-[.8rem] w-[700px] m-auto mt-8 mb-8">
-            <p className="text-[#8081ac]">
-              <span className="font-bold">Disclaimer:</span> The information
-              provided on this website is for general informational purposes
-              only and is not intended as a substitute for professional medical
-              advice, diagnosis, or treatment. Always seek the advice of your
-              physician or other qualified health provider with any questions
-              you may have regarding a medical condition.
-            </p>
-          </div>
-        </footer>
-      </body>
-    </>
+      </footer>
+    </body>
   );
 }
 
-export default App;
+export default Chat;
