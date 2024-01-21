@@ -76,7 +76,7 @@ function App() {
       method: "POST",
       headers: {
         // Use import.meta.env.VITE_OPENAI_API for testing and process for Vercel
-        Authorization: "Bearer " + process.env.OPENAI_API,
+        Authorization: "Bearer " + process.env.VITE_OPENAI_API,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
