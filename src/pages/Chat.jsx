@@ -1,4 +1,4 @@
-import "./chat.css";
+import "./Chat.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
