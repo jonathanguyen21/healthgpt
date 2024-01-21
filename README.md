@@ -19,3 +19,8 @@ HealthHub is a revolutionary project that aims to democratize access to healthca
 - **ChatGPT API**: Powering the core functionality of HealthHub, providing intelligent and context-aware responses.
 
 - **Web Technologies**: Built using HTML, CSS, and JavaScript for a seamless and responsive user experience.
+
+## Requirements to run
+
+- **ChatGPT API Key**: Create a .env file and add line: `VITE_OPENAI_API = [ChatGPT API KEY]`
+
