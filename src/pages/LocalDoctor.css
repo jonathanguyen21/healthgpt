@@ -1,0 +1,6 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.font-custom {
+  font-family: Montserrat, sans-serif;
+}
