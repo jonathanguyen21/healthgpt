@@ -10,7 +10,7 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import { useState } from "react";
 
-function Chat() {
+function App() {
   const [typing, setTyping] = useState(false);
 
   const [messages, setMessages] = useState([
@@ -75,7 +75,7 @@ function Chat() {
       method: "POST",
       headers: {
         Authorization: "Bearer " + import.meta.env.VITE_OPENAI_API,
-        "Content-Type": "apChatcation/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
     })
@@ -128,7 +128,7 @@ function Chat() {
           </ChatContainer>
         </MainContainer>
       </div>
-      <footer className="text-[1rem] text-[#A8B9E3] text-center ">
+      <footer className="text-[1rem] text-[#A8B9E3] text-center mt-3">
         <p>Your own personal medical advisor.</p>
         <div className="text-[.8rem] w-[700px] m-auto mt-8 mb-8">
           <p className="text-[#8081ac]">
@@ -145,4 +145,4 @@ function Chat() {
   );
 }
 
-export default Chat;
+export default App;
