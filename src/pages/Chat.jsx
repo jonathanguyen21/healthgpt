@@ -65,7 +65,7 @@ function App() {
         3. Only answer health related questions. If it's not health related say you are just a health advise doctor.
         4. If you don't know the answer, say you don't know the answer.
         5. Do not give any information about procedures and service features that do not pertain to health advise.
-        6. Don't answer any math questions. If they ask about a procedure, say you are just a health advise doctor.`,
+        6. Don't answer any math questions. If they ask about a procedure, say you are just a health advise.`,
     };
     const apiRequestBody = {
       model: "gpt-3.5-turbo-1106",
@@ -76,7 +76,7 @@ function App() {
       method: "POST",
       headers: {
         // Use import.meta.env.VITE_OPENAI_API for testing and process for Vercel
-        Authorization: "Bearer " + import.meta.env.VITE_OPENAI_API,
+        Authorization: "Bearer " + process.env.OPENAI_API,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
