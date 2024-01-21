@@ -9,6 +9,7 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 import { useState } from "react";
+import LeafIcon from "../icons/leaf.svg";
 
 function App() {
   const [typing, setTyping] = useState(false);
@@ -103,7 +104,7 @@ function App() {
         style={{ paddingTop: "100px" }}
       >
         <span className="text-6xl text-#4CA9EE font-custom">HealthGPT</span>
-        <img src="https://icongr.am/entypo/leaf.svg?size=50&color=5ecd81"></img>
+        <img src={LeafIcon} />
       </header>
       <div className="relative h-[450px] w-[600px] m-auto">
         <MainContainer>
