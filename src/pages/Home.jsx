@@ -24,13 +24,13 @@ const Home = () => {
                 </Link>
               </div>
               <div className='become-passenger'>
-                <h1>Find a Doctor 👨‍⚕️</h1>
+                <h1>About Us 👨‍⚕️</h1>
                 <li>
                   <ul>🩻 Find specialized care</ul>
                   <ul>🧑🏻‍⚕️ Search around for local doctors</ul>
                   <ul>😊 Decide the best choice for you</ul>
                 </li>
-                <Link to="/DoctorsNearMe">
+                <Link to="/AboutUs">
                     <button>Find a doctor near you!</button>
                 </Link>
               </div>
