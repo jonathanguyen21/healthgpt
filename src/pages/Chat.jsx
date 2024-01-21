@@ -129,7 +129,7 @@ function App() {
         </MainContainer>
       </div>
       <footer className="text-[1rem] text-[#A8B9E3] text-center mt-3">
-        <p>Your own personal medical advisor.</p>
+        <p>Your own personal medical advisor</p>
         <div className="text-[.8rem] w-[700px] m-auto mt-8 mb-8">
           <p className="text-[#8081ac]">
             <span className="font-bold">Disclaimer:</span> The information

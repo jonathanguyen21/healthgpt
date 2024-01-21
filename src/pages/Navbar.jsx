@@ -18,7 +18,7 @@ const Navbar = () => {
       <section className="navbar-links">
         <Link to="/">Home 🏠</Link>
         <Link to="/Chat">HealthGPT 🍃</Link>
-        <Link to="/DoctorsNearMe">Local Doctors 👨‍⚕️</Link>
+        <Link to="/AboutUs">About Us 👨‍⚕️</Link>
       </section>
     </nav>
   );

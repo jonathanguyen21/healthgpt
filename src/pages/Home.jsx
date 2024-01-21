@@ -15,9 +15,9 @@ const Home = () => {
               <div className='become-driver'>
                 <h1>HealthGPT 🍃</h1>
                 <li>
-                  <ul>🍃 Find general medical advice</ul>
-                  <ul>🍃 Learn how to build healthy habits</ul>
-                  <ul>🍃 Develop a better lifestyle</ul>
+                  <ul>🌿 Find general medical advice</ul>
+                  <ul>🥗 Learn how to build healthy habits</ul>
+                  <ul>🏃 Develop a better lifestyle</ul>
                 </li>
                 <Link to="/Chat">
                     <button>Start Chatting!</button>
@@ -26,9 +26,9 @@ const Home = () => {
               <div className='become-passenger'>
                 <h1>Find a Doctor 👨‍⚕️</h1>
                 <li>
-                  <ul>👨‍⚕️ Find specialized care</ul>
-                  <ul>👨‍⚕️ Search around for local doctors</ul>
-                  <ul>👨‍⚕️ Decide the best choice for you</ul>
+                  <ul>🩻 Find specialized care</ul>
+                  <ul>🧑🏻‍⚕️ Search around for local doctors</ul>
+                  <ul>😊 Decide the best choice for you</ul>
                 </li>
                 <Link to="/DoctorsNearMe">
                     <button>Find a doctor near you!</button>
