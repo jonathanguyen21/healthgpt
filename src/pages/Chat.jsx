@@ -75,7 +75,8 @@ function App() {
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + import.meta.env.VITE_OPENAI_API,
+        // Use import.meta.env.VITE_OPENAI_API for testing and process for Vercel
+        Authorization: "Bearer " + process.env.VITE_OPENAI_API,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
