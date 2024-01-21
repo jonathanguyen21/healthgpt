@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Montserrat&display=swap');
+
 .home {
   padding-top: 100px;
   margin: 0px;
@@ -19,19 +21,24 @@
   align-items: center;
   background-image: url(../assets/background.jpg);
   background-size: cover;
+  
 }
 
 .top h2 {
-  color: #1d2023;
-  font-size: 50px;
+  color: #5ECD81;
+  font-size: 70px;
   margin: 0px;
+  font-family: Jost;
+  font-weight: 900;
 }
 
 .top h1 {
   color: #1d2023;
-  font-size: 80px;
+  font-size: 60px;
   margin: 0px;
   padding-bottom: 100px;
+  font-family: Jost;
+  font-weight: 100;
 }
 
 .mid,
@@ -41,6 +48,7 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
+  background-color: #dbefed;
 }
 
 .mid-panels {
@@ -54,10 +62,12 @@
   align-items: center;
   gap: 100px;
   width: 60vw;
+  background-color: #dbefed;
 }
 
+
 .join-panels h1 {
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .become-driver,
@@ -69,22 +79,22 @@
   flex-direction: column;
   height: 500px;
   width: 500px;
-  background-color: #1295d8;
+  background-color: #4CA9EE;
   border-radius: 40px;
   transition: all 0.2s ease-in-out;
-}
-
-.become-driver:hover,
-.become-passenger:hover {
-  transform: scale(1.02);
+  font-family: Jost;
 }
 
 .become-driver li,
 .become-passenger li {
   list-style: none;
   font-size: 20px;
-  padding-right: 50px;
+  padding-right: 40px;
   padding-bottom: 50px;
+}
+
+.become-passenger li {
+  padding-left: 20px;
 }
 
 .join-panels button {
