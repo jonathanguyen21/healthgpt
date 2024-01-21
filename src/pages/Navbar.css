@@ -31,7 +31,7 @@
 }
 
 .logo h1 {
-  color: #ffb551;
+  color: #5ECD81;
   font-size: 40px;
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -67,5 +67,5 @@
   transform: scale(1.05);
   text-decoration: underline;
   text-decoration-thickness: 5px;
-  text-decoration-color: #1295d8;
+  text-decoration-color: #5ECD81;
 }

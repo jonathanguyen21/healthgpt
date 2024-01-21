@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     <div className='home'>
         <div className='top'>
           <h2>HealthHub</h2>
-          <h1>Helping one person at a time.</h1>
+          <h1>A Better You, A Healthier Tomorrow</h1>
         </div>
         <div className='mid'>
           <div className='mid-panels'>
@@ -18,16 +19,20 @@ const Home = () => {
                   <ul>🍃 Learn how to build healthy habits</ul>
                   <ul>🍃 Develop a better lifestyle</ul>
                 </li>
-                <button>Start Chatting!</button>
+                <Link to="/Chat">
+                    <button>Start Chatting!</button>
+                </Link>
               </div>
               <div className='become-passenger'>
                 <h1>Find a Doctor 👨‍⚕️</h1>
                 <li>
-                  <ul>👨‍⚕️ Search local or long distance ride offers</ul>
-                  <ul>👨‍⚕️ Share rides with fellow UCSC students</ul>
-                  <ul>👨‍⚕️ Save money and enjoy sharing a ride</ul>
+                  <ul>👨‍⚕️ Find specialized care</ul>
+                  <ul>👨‍⚕️ Search around for local doctors</ul>
+                  <ul>👨‍⚕️ Decide the best choice for you</ul>
                 </li>
-                <button>Find a doctor near you!</button>
+                <Link to="/DoctorsNearMe">
+                    <button>Find a doctor near you!</button>
+                </Link>
               </div>
             </div>
           </div>
