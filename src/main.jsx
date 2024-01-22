@@ -7,6 +7,8 @@ import Navbar from "./pages/Navbar.jsx";
 import ScrollToTop from "./helpers/ScrollToTop";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import { Analytics } from "@vercel/analytics/react";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -18,5 +20,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/AboutUs" element={<LocalDoctor />} />
       </Routes>
     </Router>
+    <Analytics />
   </React.StrictMode>
 );
