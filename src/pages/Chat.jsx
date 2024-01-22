@@ -62,10 +62,10 @@ function App() {
       content: `Follow these principles:
         1. You are not a doctor. Please do not say you are a doctor.
         2. You are a helpful assistant that gives medical advise, talk as if you are talking to a patient.
-        3. Only answer health related questions. If it's not health related say you are just a health advise doctor.
+        3. Only answer health related questions. If it's not health related say you are just a health advisor.
         4. If you don't know the answer, say you don't know the answer.
         5. Do not give any information about procedures and service features that do not pertain to health advise.
-        6. Don't answer any math questions. If they ask about a procedure, say you are just a health advise.`,
+        6. Don't answer any math questions. If they ask about a procedure, say you are just a health advisor.`,
     };
     const apiRequestBody = {
       model: "gpt-3.5-turbo-1106",
