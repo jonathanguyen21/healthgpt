@@ -4,6 +4,9 @@
 
 HealthHub is a revolutionary project that aims to democratize access to healthcare advice. With the belief that healthcare is a basic human right, we have developed a web application powered by the ChatGPT API to provide free and personalized health guidance to users globally.
 
+## Website Link
+https://www.healthhub.wiki/
+
 ## Features
 
 - **Free Healthcare Advice**: Access a wealth of healthcare information without any cost, promoting inclusivity and accessibility.
