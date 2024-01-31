@@ -31,7 +31,7 @@ const Home = () => {
                   <ul>😊 Decide the best choice for you</ul>
                 </li>
                 <Link to="/AboutUs">
-                    <button>Find a doctor near you!</button>
+                    <button>Find out more!</button>
                 </Link>
               </div>
             </div>
